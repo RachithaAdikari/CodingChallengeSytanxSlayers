@@ -16,19 +16,18 @@ def generate_password():
         return
 
 
-    only including selected
+    # only including selected
     password_characters = string.ascii_letters + string.digits + string.punctuation + include_string
-    # password_characters -= exclude_char
     password = ''. join(random.choice(password_characters) for i in range(password_length))
     password_entry.delete (0, tk.END)
     password_entry.insert(0, password)
 
-    # # excluding but not including selected
-    # password_characters = string.ascii_letters + string.digits + string.punctuation + include_string
-    # password_chars = ''.join(set(password_characters) - set(exclude_char))
-    # password = ''.join(random.choice(password_chars) for i in range(password_length))
-    # password_entry.delete(0, tk.END)
-    # password_entry.insert(0, password)
+    # excluding but not including selected
+    password_characters = string.ascii_letters + string.digits + string.punctuation + include_string
+    password_chars = ''.join(set(password_characters) - set(exclude_char))
+    password = ''.join(random.choice(password_chars) for i in range(password_length))
+    password_entry.delete(0, tk.END)
+    password_entry.insert(0, password)
 
 
 # Creating main window
