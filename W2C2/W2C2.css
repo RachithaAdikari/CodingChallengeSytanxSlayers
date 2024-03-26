@@ -9,8 +9,10 @@ body{
     height: 100vh;
     font-family: Helvetica, sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
 }
 
 .board{
@@ -44,4 +46,12 @@ body{
     background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+#result{
+    width: 200px;
+    height: 2rem;
+    font-size: 1.5rem;
+    color: red;
+    text-align: center;
 }
